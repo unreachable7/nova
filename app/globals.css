@@ -17,6 +17,9 @@ body {
 }
 
 @media (pointer: fine) {
+  html {
+    cursor: none;
+  }
   a,
   button,
   [data-cursor-hover] {
