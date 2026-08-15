@@ -34,7 +34,7 @@ export default function HowItWorks() {
           className="max-w-xl mb-16"
         >
           <span className="text-xs font-mono tracking-widest uppercase text-lavender/70">
-            // how it works
+            {'// how it works'}
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">
             three steps between you and the next launch.

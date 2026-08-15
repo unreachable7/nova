@@ -212,7 +212,7 @@ export default function Features() {
           className="max-w-xl mb-16"
         >
           <span className="text-xs font-mono tracking-widest uppercase text-lavender/70">
-            // core features
+            {'// core features'}
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">
             built for traders who can&apos;t afford to be second.
