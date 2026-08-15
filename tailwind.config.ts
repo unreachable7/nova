@@ -16,7 +16,8 @@ const config: Config = {
         magenta: '#E879F9',
       },
       fontFamily: {
-        sans: ['var(--font-jakarta)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-display)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       backgroundImage: {
@@ -44,11 +45,28 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
           '50%': { transform: 'translateY(-14px) translateX(8px)' },
         },
+        blob: {
+          '0%, 100%': { transform: 'translate(0%, 0%) scale(1)' },
+          '25%': { transform: 'translate(6%, -8%) scale(1.08)' },
+          '50%': { transform: 'translate(-4%, 6%) scale(0.96)' },
+          '75%': { transform: 'translate(-8%, -4%) scale(1.04)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
       animation: {
         'spin-slow': 'spin-slow 18s linear infinite',
         'pulse-ring': 'pulse-ring 3s cubic-bezier(0.2,0.6,0.4,1) infinite',
         drift: 'drift 7s ease-in-out infinite',
+        blob: 'blob 20s ease-in-out infinite',
+        marquee: 'marquee 28s linear infinite',
+        'gradient-x': 'gradient-x 6s ease infinite',
       },
     },
   },

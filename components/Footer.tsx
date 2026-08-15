@@ -23,7 +23,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <div className="flex items-center gap-2.5">
               <NovaLogo className="w-7 h-7" id="footer-mark" />
-              <span className="text-lg font-extrabold lowercase">nova</span>
+              <span className="text-lg font-display font-extrabold lowercase">nova</span>
             </div>
             <p className="mt-4 text-sm text-white/45 leading-relaxed">
               Zero-latency memecoin trading, built for Telegram. Snipe, track, and manage
@@ -58,7 +58,8 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="w-9 h-9 rounded-lg glass flex items-center justify-center text-white/60 hover:text-lavender hover:border-violet-400/30 transition-colors"
+                    data-cursor-hover
+                    className="w-9 h-9 rounded-lg glass flex items-center justify-center text-white/60 hover:text-lavender hover:border-violet-400/30 hover:-translate-y-0.5 transition-all"
                   >
                     <s.icon className="w-4 h-4" />
                   </a>

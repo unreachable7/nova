@@ -1,3 +1,4 @@
+import AnimatedBackground from '@/components/AnimatedBackground';
 import FAQ from '@/components/FAQ';
 import Features from '@/components/Features';
 import Footer from '@/components/Footer';
@@ -8,7 +9,8 @@ import StatsBar from '@/components/StatsBar';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-void overflow-x-hidden">
+    <main className="relative min-h-screen overflow-x-hidden">
+      <AnimatedBackground />
       <Navbar />
       <Hero />
       <StatsBar />

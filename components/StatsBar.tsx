@@ -2,6 +2,7 @@
 
 import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import Marquee from './Marquee';
 
 function Counter({
   to,
@@ -54,7 +55,7 @@ export default function StatsBar() {
             transition={{ duration: 0.5, delay: i * 0.08 }}
             className="text-center lg:text-left"
           >
-            <div className="text-2xl sm:text-3xl font-extrabold text-gradient font-mono tracking-tight">
+            <div className="text-2xl sm:text-3xl font-display font-extrabold text-gradient tracking-tight">
               {stat.value}
             </div>
             <div className="mt-1.5 text-xs text-white/45 uppercase tracking-wider">
@@ -62,6 +63,9 @@ export default function StatsBar() {
             </div>
           </motion.div>
         ))}
+      </div>
+      <div className="border-t border-white/[0.05]">
+        <Marquee />
       </div>
     </section>
   );

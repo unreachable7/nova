@@ -40,10 +40,10 @@ export default function FAQ() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="text-xs font-medium tracking-widest uppercase text-lavender/70">
-            faq
+          <span className="text-xs font-mono tracking-widest uppercase text-lavender/70">
+            // faq
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">
             questions, answered.
           </h2>
         </motion.div>
@@ -61,10 +61,11 @@ export default function FAQ() {
                 className="glass rounded-2xl overflow-hidden"
               >
                 <button
+                  data-cursor-hover
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-4 text-left px-6 py-5"
                 >
-                  <span className="font-semibold text-white/90">{item.q}</span>
+                  <span className="font-display font-semibold text-white/90">{item.q}</span>
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25 }}

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-jakarta: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-}
-
 * {
   scroll-behavior: smooth;
 }
@@ -18,8 +13,15 @@ body {
 }
 
 body {
-  font-family: var(--font-jakarta);
   -webkit-font-smoothing: antialiased;
+}
+
+@media (pointer: fine) {
+  a,
+  button,
+  [data-cursor-hover] {
+    cursor: none;
+  }
 }
 
 ::selection {
@@ -34,10 +36,10 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.035);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .text-gradient {
@@ -47,8 +49,20 @@ body {
   color: transparent;
 }
 
+.text-gradient-animated {
+  background: linear-gradient(90deg, #ffffff, #dcc4fb, #e879f9, #c084fc, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .glow-border {
   box-shadow: 0 0 0 1px rgba(192, 132, 252, 0.25), 0 0 24px rgba(168, 85, 247, 0.12);
+}
+
+.font-display {
+  letter-spacing: -0.02em;
 }
 
 /* thin custom scrollbar to match the theme */

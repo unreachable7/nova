@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import Magnetic from './Magnetic';
 import NovaLogo from './NovaLogo';
 
 const NAV_LINKS = [
@@ -38,7 +39,7 @@ export default function Navbar() {
         <div className="glass rounded-2xl px-4 sm:px-5 py-3 flex items-center justify-between shadow-glow">
           <a href="#top" className="flex items-center gap-2.5 group">
             <NovaLogo className="w-8 h-8 transition-transform duration-500 group-hover:rotate-45" />
-            <span className="text-lg font-extrabold tracking-tight lowercase text-white">
+            <span className="text-lg font-display font-extrabold tracking-tight lowercase text-white">
               nova
             </span>
           </a>
@@ -48,6 +49,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                data-cursor-hover
                 className="text-sm text-white/70 hover:text-white transition-colors"
               >
                 {link.label}
@@ -63,16 +65,19 @@ export default function Navbar() {
               </span>
               bot online
             </div>
-            <motion.a
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              href={BOT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.35)] hover:shadow-[0_0_32px_rgba(168,85,247,0.55)] transition-shadow"
-            >
-              Launch Bot
-            </motion.a>
+            <Magnetic strength={0.25}>
+              <motion.a
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                href={BOT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor-hover
+                className="text-sm font-display font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-400 text-white shadow-[0_0_20px_rgba(168,85,247,0.35)] hover:shadow-[0_0_32px_rgba(168,85,247,0.55)] transition-shadow"
+              >
+                Launch Bot
+              </motion.a>
+            </Magnetic>
           </div>
         </div>
       </div>

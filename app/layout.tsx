@@ -1,17 +1,25 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, Manrope, Space_Mono } from 'next/font/google';
 import './globals.css';
+import CustomCursor from '@/components/CustomCursor';
+import GrainOverlay from '@/components/GrainOverlay';
 
-const jakarta = Plus_Jakarta_Sans({
+const display = Bricolage_Grotesque({
   subsets: ['latin'],
-  variable: '--font-jakarta',
-  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-display',
+  weight: ['500', '600', '700', '800'],
 });
 
-const mono = JetBrains_Mono({
+const body = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '500', '600', '700'],
+});
+
+const mono = Space_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
-  weight: ['400', '500', '600'],
+  weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
@@ -33,8 +41,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${mono.variable}`}>
-      <body className="bg-void text-white antialiased">{children}</body>
+    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+      <body className="bg-void text-white antialiased font-sans">
+        <CustomCursor />
+        <GrainOverlay />
+        {children}
+      </body>
     </html>
   );
 }
