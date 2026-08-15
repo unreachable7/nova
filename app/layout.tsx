@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Bricolage_Grotesque, Manrope, Space_Mono } from 'next/font/google';
 import './globals.css';
-import CustomCursor from '@/components/CustomCursor';
 import GrainOverlay from '@/components/GrainOverlay';
 
 const display = Bricolage_Grotesque({
@@ -43,7 +42,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body className="bg-void text-white antialiased font-sans">
-        <CustomCursor />
         <GrainOverlay />
         {children}
       </body>
