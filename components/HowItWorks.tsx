@@ -8,7 +8,7 @@ const STEPS = [
   {
     icon: Send,
     title: 'Open Telegram',
-    desc: 'Click launch to open @NovaTradingBot instantly — zero downloads, zero installs.',
+    desc: 'Click launch to open @Novatradingsolana_bot instantly — zero downloads, zero installs.',
   },
   {
     icon: Wallet,

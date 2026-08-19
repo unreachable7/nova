@@ -6,7 +6,7 @@ import { MouseEvent, useEffect, useState } from 'react';
 import Magnetic from './Magnetic';
 import NovaLogo from './NovaLogo';
 
-const BOT_URL = 'https://t.me/NovaTradingBot';
+const BOT_URL = 'https://t.me/Novatradingsolana_bot';
 
 const TICKS = [
   { pair: 'WIF / SOL', type: 'buy', amount: '2.4 SOL', speed: '0.06s' },

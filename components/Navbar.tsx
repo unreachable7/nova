@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { label: 'Docs', href: '#faq' },
 ];
 
-const BOT_URL = 'https://t.me/NovaTradingBot';
+const BOT_URL = 'https://t.me/Novatradingsolana_bot';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
